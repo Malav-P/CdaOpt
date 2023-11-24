@@ -1,0 +1,18 @@
+name = "CdaOpt"
+uuid = "e034ca8a-c669-4aae-a75b-19197cfd5aba"
+authors = ["Malav_P <malavpatel2022@u.northwestern.edu>"]
+version = "0.1.0"
+
+[deps]
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+Gurobi = "2e9cd046-0924-5485-92f1-d5272153d98b"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
+
+[extras]
+Markdown = "d6f4376e-aef5-505a-96c1-9c027394607a"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Markdown", "Test"]
