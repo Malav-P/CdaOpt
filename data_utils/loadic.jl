@@ -1,3 +1,8 @@
+"""
+    loadic(fname)
+
+Load the initial condition from JSON file `fname`. The contents of the file `fname` must have keys `"x0"` and  `"period"`.
+"""
 function loadic(fname::AbstractString)
 
     jsondict =  open(fname, "r") do f
@@ -11,6 +16,12 @@ function loadic(fname::AbstractString)
 
 end
 
+"""
+    loadicdir(dir, ordering)
+
+Laod the initial conditions of all the JSON files in `dir`. All files in `dir` must have extension `.json`.
+`ordering` specifies the order in which the files are read.
+"""
 function loadicdir(dir::AbstractString; ordering::Union{Vector{Int}, Nothing}=nothing)
     fnames = readdir(dir)
 
