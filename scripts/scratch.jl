@@ -3,8 +3,8 @@ include("../CdaOpt/data_utils/data_utils.jl")
 using .CdaOpt
 using .DataUtils
 
-CATALOG_DIR = abspath("./CdaOpt/data/catalog")
-TIME_HISTORY = abspath("./CdaOpt/data/targets/time_history1.txt")
+CATALOG_DIR = abspath("./data/catalog")
+TIME_HISTORY = abspath("./data/targets/time_history1.txt")
 
 x0 = DataUtils.loadicdir(CATALOG_DIR, ordering=[4,3,1,2,5,6])
 #-------------------------------------------------------------------- ICs
