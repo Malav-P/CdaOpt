@@ -1,6 +1,6 @@
 using Test
 
-include("../CdaOpt/src/cdaopt.jl")
+include("../src/cdaopt.jl")
 using .CdaOpt
 
 x0 = [0.9519486347314083  0.0 0.0 0.0 -0.952445273435512 0.0 6.45;
