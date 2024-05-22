@@ -7,6 +7,6 @@ $ cd ./CdaOpt # navigate into root directory
 
 $ julia setup_env.jl # instantiate the package and its dependencies
 
-$ julia --project=./ ./scripts/scratch.jl # run an example script
+$ julia --project=./CdaOpt ./scripts/scratch.jl # run an example script
 ```
 
