@@ -1,11 +1,14 @@
-include("../src/cdaopt.jl")
-include("../data_utils/data_utils.jl")
+include("../CdaOpt/src/cdaopt.jl")
+include("../CdaOpt/data_utils/data_utils.jl")
 using .CdaOpt
 using .DataUtils
 
-x0 = DataUtils.loadicdir("./data/catalog", ordering=[4,3,1,2,5,6])
+CATALOG_DIR = abspath("./CdaOpt/data/catalog")
+TIME_HISTORY = abspath("./CdaOpt/data/targets/time_history1.txt")
+
+x0 = DataUtils.loadicdir(CATALOG_DIR, ordering=[4,3,1,2,5,6])
 #-------------------------------------------------------------------- ICs
-~, target, tstep = DataUtils.loadtarget("./data/targets/time_history1.txt")
+~, target, tstep = DataUtils.loadtarget(TIME_HISTORY)
 #-------------------------------------------------------------------- target points
 tspan = collect(0:tstep:6.45);
 #-------------------------------------------------------------------- time span
